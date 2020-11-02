@@ -1,0 +1,41 @@
+var x = 5
+var text = ""
+func evenNumber(x:Int) -> (String) {
+    if x % 2 == 0 {
+       text = "Число четное"
+    } else {
+        text = "Число не четное"
+        }
+    return(text)
+    }
+
+func devideThree(x:Int) -> (String) {
+    if x % 3 == 0 {
+       text = "Делится на 3"
+    } else {
+        text = "Число не делится на 3 без остатка"
+        }
+    return(text)
+    }
+
+
+print(evenNumber(x: x))
+print(devideThree(x: x))
+
+
+var array = [Int]()
+
+for i in 0...100 {
+    array.append(i)
+    }
+print(array)
+
+var index = 0
+while index < array.count {
+    if array[index] % 2 == 0 || array[index] % 3 != 0 {
+        array.remove(at: index)
+        index -= 1
+    }
+    index += 1
+}
+print(array)
